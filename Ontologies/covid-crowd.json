@@ -1,0 +1,286 @@
+{
+    "Entity type": {
+        "Value property": {
+            "Value type": []
+        },
+        "Data type": [
+            "http://www.w3.org/2001/XMLSchema#string",
+            "http://www.w3.org/2001/XMLSchema#date"
+        ],
+        "Object type": [
+            "http://crowd.fi.uncoma.edu.ar#COVID-19Medicine",
+            "http://crowd.fi.uncoma.edu.ar#Regulatory-org",
+            "http://crowd.fi.uncoma.edu.ar#COVID-19-treatment-drug",
+            "http://crowd.fi.uncoma.edu.ar#COVID-19-vaccine",
+            "http://crowd.fi.uncoma.edu.ar#Pfizer-Vaccine",
+            "http://crowd.fi.uncoma.edu.ar#Inoculation",
+            "http://crowd.fi.uncoma.edu.ar#Experimental-Substance"
+        ]
+    },
+    "Role": [
+        {
+            "object type cardinality": [
+                "card1"
+            ],
+            "rolename": "http://crowd.fi.uncoma.edu.ar#of",
+            "entity type": "http://crowd.fi.uncoma.edu.ar#COVID-19Medicine",
+            "relationship": "http://crowd.fi.uncoma.edu.ar#as1"
+        },
+        {
+            "object type cardinality": [
+                "card2"
+            ],
+            "rolename": "http://crowd.fi.uncoma.edu.ar#approved-by",
+            "entity type": "http://crowd.fi.uncoma.edu.ar#Regulatory-org",
+            "relationship": "http://crowd.fi.uncoma.edu.ar#as1"
+        },
+        {
+            "object type cardinality": [
+                "card3"
+            ],
+            "rolename": "http://crowd.fi.uncoma.edu.ar#role-a-1",
+            "entity type": "http://crowd.fi.uncoma.edu.ar#Regulatory-org",
+            "relationship": "http://crowd.fi.uncoma.edu.ar#coordinates"
+        },
+        {
+            "object type cardinality": [
+                "card4"
+            ],
+            "rolename": "http://crowd.fi.uncoma.edu.ar#role-b-1",
+            "entity type": "http://crowd.fi.uncoma.edu.ar#Inoculation",
+            "relationship": "http://crowd.fi.uncoma.edu.ar#coordinates",
+            "mandatory": "mandatorybWlV"
+        },
+        {
+            "object type cardinality": [
+                "card6"
+            ],
+            "rolename": "http://crowd.fi.uncoma.edu.ar#with",
+            "entity type": "http://crowd.fi.uncoma.edu.ar#COVID-19-vaccine",
+            "relationship": "http://crowd.fi.uncoma.edu.ar#As2"
+        },
+        {
+            "object type cardinality": [
+                "card7"
+            ],
+            "rolename": "http://crowd.fi.uncoma.edu.ar#participates-in",
+            "entity type": "http://crowd.fi.uncoma.edu.ar#Inoculation",
+            "relationship": "http://crowd.fi.uncoma.edu.ar#As2",
+            "mandatory": "mandatoryIyMT"
+        },
+        {
+            "object type cardinality": [
+                "card9"
+            ],
+            "rolename": "http://crowd.fi.uncoma.edu.ar#with",
+            "entity type": "http://crowd.fi.uncoma.edu.ar#Pfizer-Vaccine",
+            "relationship": "http://crowd.fi.uncoma.edu.ar#As3"
+        },
+        {
+            "object type cardinality": [
+                "card10"
+            ],
+            "rolename": "http://crowd.fi.uncoma.edu.ar#participates-in",
+            "entity type": "http://crowd.fi.uncoma.edu.ar#Inoculation",
+            "relationship": "http://crowd.fi.uncoma.edu.ar#As3"
+        }
+    ],
+    "Constraints": {
+        "Cardinality constraints": {
+            "Attibutive property cardinality": [],
+            "Object type cardinality": [
+                {
+                    "name": "card1",
+                    "maximum": "1",
+                    "minimum": "0"
+                },
+                {
+                    "name": "card2",
+                    "maximum": "*",
+                    "minimum": "0"
+                },
+                {
+                    "name": "card3",
+                    "maximum": "*",
+                    "minimum": "0"
+                },
+                {
+                    "name": "card4",
+                    "maximum": "1",
+                    "minimum": "1"
+                },
+                {
+                    "name": "card6",
+                    "maximum": "1",
+                    "minimum": "0"
+                },
+                {
+                    "name": "card7",
+                    "maximum": "1",
+                    "minimum": "1"
+                },
+                {
+                    "name": "card9",
+                    "maximum": "1",
+                    "minimum": "0"
+                },
+                {
+                    "name": "card10",
+                    "maximum": "2",
+                    "minimum": "0"
+                }
+            ]
+        },
+        "Disjointness constraints": {
+            "Disjoint object type": [
+                {
+                    "entities": [
+                        "http://crowd.fi.uncoma.edu.ar#COVID-19-treatment-drug",
+                        "http://crowd.fi.uncoma.edu.ar#COVID-19-vaccine"
+                    ],
+                    "name": "dc11"
+                }
+            ],
+            "Disjoint role": []
+        },
+        "Completeness constraints": [
+            {
+                "entities": [
+                    "http://crowd.fi.uncoma.edu.ar#COVID-19-treatment-drug",
+                    "http://crowd.fi.uncoma.edu.ar#COVID-19-vaccine"
+                ],
+                "name": "cc12"
+            }
+        ],
+        "Mandatory constraints": {
+            "Mandatory": [
+                {
+                    "declared on": "http://crowd.fi.uncoma.edu.ar#role-b-1",
+                    "name": "mandatorybWlV"
+                },
+                {
+                    "declared on": "http://crowd.fi.uncoma.edu.ar#participates-in",
+                    "name": "mandatoryIyMT"
+                }
+            ]
+        }
+    },
+    "Relationship": {
+        "Attributive property": {
+            "Attributive property": [
+                {
+                    "domain": [
+                        "http://crowd.fi.uncoma.edu.ar#COVID-19Medicine"
+                    ],
+                    "name": "http://crowd.fi.uncoma.edu.ar#name",
+                    "range": "http://www.w3.org/2001/XMLSchema#string"
+                },
+                {
+                    "domain": [
+                        "http://crowd.fi.uncoma.edu.ar#Regulatory-org"
+                    ],
+                    "name": "http://crowd.fi.uncoma.edu.ar#rname",
+                    "range": "http://www.w3.org/2001/XMLSchema#string"
+                },
+                {
+                    "domain": [
+                        "http://crowd.fi.uncoma.edu.ar#Regulatory-org"
+                    ],
+                    "name": "http://crowd.fi.uncoma.edu.ar#country",
+                    "range": "http://www.w3.org/2001/XMLSchema#string"
+                },
+                {
+                    "domain": [
+                        "http://crowd.fi.uncoma.edu.ar#Inoculation"
+                    ],
+                    "name": "http://crowd.fi.uncoma.edu.ar#Person",
+                    "range": "http://www.w3.org/2001/XMLSchema#string"
+                },
+                {
+                    "domain": [
+                        "http://crowd.fi.uncoma.edu.ar#Inoculation"
+                    ],
+                    "name": "http://crowd.fi.uncoma.edu.ar#date",
+                    "range": "http://www.w3.org/2001/XMLSchema#date"
+                },
+                {
+                    "domain": [
+                        "http://crowd.fi.uncoma.edu.ar#Inoculation"
+                    ],
+                    "name": "http://crowd.fi.uncoma.edu.ar#batch",
+                    "range": "http://www.w3.org/2001/XMLSchema#string"
+                }
+            ],
+            "Attribute": {
+                "Attribute": [],
+                "Mapped to": []
+            }
+        },
+        "Subsumption": [
+            {
+                "entity child": "http://crowd.fi.uncoma.edu.ar#Pfizer-Vaccine",
+                "name": "c1704_czAx_WWO7_GrsO_VXpC_73sS_9gjP_Qs8j_Ja7X_mNAV_8LvG",
+                "entity parent": "http://crowd.fi.uncoma.edu.ar#COVID-19-vaccine"
+            },
+            {
+                "entity child": "http://crowd.fi.uncoma.edu.ar#Experimental-Substance",
+                "name": "http://crowd.fi.uncoma.edu.ar#generalization-1_bdxF_Rw6Y_oIjU_CPOS_K1UB",
+                "entity parent": "http://crowd.fi.uncoma.edu.ar#COVID-19-vaccine"
+            },
+            {
+                "entity child": "http://crowd.fi.uncoma.edu.ar#Experimental-Substance",
+                "name": "http://crowd.fi.uncoma.edu.ar#generalization-2_oYjq_wl6D_KaCc_4W0t_qMn7",
+                "entity parent": "http://crowd.fi.uncoma.edu.ar#COVID-19-treatment-drug"
+            },
+            {
+                "entity child": "http://crowd.fi.uncoma.edu.ar#COVID-19-treatment-drug",
+                "disjointness constraints": "dc11",
+                "completeness constraints": "cc12",
+                "name": "c3379_X09R",
+                "entity parent": "http://crowd.fi.uncoma.edu.ar#COVID-19Medicine"
+            },
+            {
+                "entity child": "http://crowd.fi.uncoma.edu.ar#COVID-19-vaccine",
+                "disjointness constraints": "dc11",
+                "completeness constraints": "cc12",
+                "name": "c3379_ohzk",
+                "entity parent": "http://crowd.fi.uncoma.edu.ar#COVID-19Medicine"
+            },
+            {
+                "entity child": "http://crowd.fi.uncoma.edu.ar#As3",
+                "name": "c1748_osGy_IXSG_KNw4_iss6_ZkuC_rLFQ_5PeT_phke_ERgD_a2aI",
+                "entity parent": "http://crowd.fi.uncoma.edu.ar#As2"
+            }
+        ],
+        "Relationship": [
+            {
+                "entities": [
+                    "http://crowd.fi.uncoma.edu.ar#COVID-19Medicine",
+                    "http://crowd.fi.uncoma.edu.ar#Regulatory-org"
+                ],
+                "name": "http://crowd.fi.uncoma.edu.ar#as1"
+            },
+            {
+                "entities": [
+                    "http://crowd.fi.uncoma.edu.ar#Regulatory-org",
+                    "http://crowd.fi.uncoma.edu.ar#Inoculation"
+                ],
+                "name": "http://crowd.fi.uncoma.edu.ar#coordinates"
+            },
+            {
+                "entities": [
+                    "http://crowd.fi.uncoma.edu.ar#COVID-19-vaccine",
+                    "http://crowd.fi.uncoma.edu.ar#Inoculation"
+                ],
+                "name": "http://crowd.fi.uncoma.edu.ar#As2"
+            },
+            {
+                "entities": [
+                    "http://crowd.fi.uncoma.edu.ar#Pfizer-Vaccine",
+                    "http://crowd.fi.uncoma.edu.ar#Inoculation"
+                ],
+                "name": "http://crowd.fi.uncoma.edu.ar#As3"
+            }
+        ]
+    }
+}
