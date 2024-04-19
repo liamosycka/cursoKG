@@ -1,0 +1,7 @@
+PREFIX nobel: <http://data.nobelprize.org/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+ASK {
+  <http://data.nobelprize.org/resource/laureate/1> rdf:type nobel:Laureate;
+}

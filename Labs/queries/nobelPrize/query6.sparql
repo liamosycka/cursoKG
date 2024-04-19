@@ -1,0 +1,14 @@
+PREFIX nobel: <http://data.nobelprize.org/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT ?name ?prizeName WHERE {
+  ?person rdf:type nobel:Laureate;
+    rdfs:label ?name;
+    foaf:gender ?gender;
+    nobel:nobelPrize ?prize.
+  ?prize rdfs:label ?prizeName;
+    nobel:category ?category.
+FILTER (lang(?prizeName) = 'en' && ?gender = 'female' && ?category = nobel:Physics )
+}

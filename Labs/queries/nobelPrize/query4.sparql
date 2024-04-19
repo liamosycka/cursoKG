@@ -1,0 +1,10 @@
+PREFIX nobel: <http://data.nobelprize.org/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT *
+WHERE {
+    ?subject a nobel:Laureate .
+    OPTIONAL { ?subject <http://dbpedia.org/property/dateOfDeath> ?dd . }
+}
