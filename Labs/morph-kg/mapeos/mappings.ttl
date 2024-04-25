@@ -20,7 +20,7 @@
 
 :alumnos a void:Dataset;
     void:exampleResource :map0.
-:map0 rml:logicalSource ex:source.
+:map0 rml:logicalSource :source.
 :source a rml:LogicalSource;
     rml:source "https://raw.githubusercontent.com/germanbraun/cursoKG/main/Labs/morph-kg/data/alumnos.csv";
     rml:referenceFormulation ql:CSV.
