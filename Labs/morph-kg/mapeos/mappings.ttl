@@ -18,28 +18,28 @@
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix org: <http://www.w3.org/ns/org#> .
 
-ex:alumnos a void:Dataset;
-    void:exampleResource ex:map0.
-ex:map0 rml:logicalSource ex:source.
-ex:source a rml:LogicalSource;
+:alumnos a void:Dataset;
+    void:exampleResource :map0.
+:map0 rml:logicalSource ex:source.
+:source a rml:LogicalSource;
     rml:source "https://raw.githubusercontent.com/germanbraun/cursoKG/main/Labs/morph-kg/data/alumnos.csv";
     rml:referenceFormulation ql:CSV.
 
-ex:map0 a rr:TripleMap;
+:map0 a rr:TripleMap;
     rdfs:label "Alumnos";
 
     rr:subjectMap [
         rr:template "http://example.com/alumnos/{ID}";
-        rr:class ex:Alumno;
+        rr:class :Alumno;
     ];
 
     rr:predicateObjectMap [
-        rr:predicate ex:nombre;
+        rr:predicate :nombre;
         rr:objectMap [ rr:column "Nombre"; rr:datatype xsd:string ];
     ];
 
     rr:predicateObjectMap [
-        rr:predicate ex:apellido;
+        rr:predicate :apellido;
         rr:objectMap [ rr:column "Apellido"; rr:datatype xsd:string ];
     ]
     .
