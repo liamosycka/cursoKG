@@ -18,28 +18,24 @@
 @prefix dct: <http://purl.org/dc/terms/>.
 @prefix org: <http://www.w3.org/ns/org#> .
 
-:alumnos a void:Dataset;
-    void:exampleResource :map0.
-:map0 rml:logicalSource :source.
-:source a rml:LogicalSource;
+<#AlumnosMapping>
+  rml:logicalSource [
     rml:source "https://raw.githubusercontent.com/germanbraun/cursoKG/main/Labs/morph-kg/data/alumnos.csv";
-    rml:referenceFormulation ql:CSV.
+    rml:referenceFormulation ql:CSV ].
 
-:map0 a rr:TripleMap;
-    rdfs:label "Alumnos";
+<#AlumnosMapping>
+  rr:subjectMap [
+    rr:template "http://example.com/Alumno/{ID}";
+    rr:class :Alumno ].
 
-    rr:subjectMap [
-        rr:template "http://example.com/alumnos/{ID}";
-        rr:class :Alumno;
-    ];
+<#AlumnosMapping>
+  rr:predicateObjectMap [
+    rr:predicate :name;
+    rr:objectMap [ rml:reference "Nombre"; rr:datatype xsd:string ] 
+    ].
 
-    rr:predicateObjectMap [
-        rr:predicate :nombre;
-        rr:objectMap [ rr:column "Nombre"; rr:datatype xsd:string ];
-    ];
-
-    rr:predicateObjectMap [
-        rr:predicate :apellido;
-        rr:objectMap [ rr:column "Apellido"; rr:datatype xsd:string ];
-    ]
-    .
+<#AlumnosMapping>
+  rr:predicateObjectMap [
+    rr:predicate :apellido;
+    rr:objectMap [ rml:reference "Apellido"; rr:datatype xsd:string ] 
+    ].
