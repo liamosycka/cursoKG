@@ -1,5 +1,5 @@
 ## Run py script
-Este lab consulta el servicio [Users]([https://duckduckgo.com](https://reqres.in/api/users), parse el objecto JSON de la respuesta e inserta un set de RDF triplas en un nuevo graph. Utiliza [RDFlib](https://rdflib.readthedocs.io/en/stable/) y [SPARQLWrapper](https://sparqlwrapper.readthedocs.io/en/latest/)
+Este lab consulta el servicio [Users](https://reqres.in/api/users), parse el objecto JSON de la respuesta e inserta un set de RDF triplas en un nuevo graph. Utiliza [RDFlib](https://rdflib.readthedocs.io/en/stable/) y [SPARQLWrapper](https://sparqlwrapper.readthedocs.io/en/latest/)
 
 #### Preconfigurar script
 
