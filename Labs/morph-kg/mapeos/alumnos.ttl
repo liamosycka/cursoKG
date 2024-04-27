@@ -30,12 +30,24 @@
 
 <#AlumnosMapping>
   rr:predicateObjectMap [
-    rr:predicate :name;
+    rr:predicate foaf:firstName;
     rr:objectMap [ rml:reference "Nombre"; rr:datatype xsd:string ] 
     ].
 
 <#AlumnosMapping>
   rr:predicateObjectMap [
-    rr:predicate :apellido;
+    rr:predicate foaf:surname;
     rr:objectMap [ rml:reference "Apellido"; rr:datatype xsd:string ] 
+    ].
+
+<#AlumnosMapping>
+  rr:predicateObjectMap [
+    rr:predicate :formacion;
+    rr:objectMap [ rml:reference "Formación"; rr:datatype xsd:string ] 
+    ].
+
+<#AlumnosMapping>
+  rr:predicateObjectMap [
+    rr:predicate foaf:mbox;
+    rr:objectMap [ rml:reference "MAIL"; rr:datatype xsd:string ] 
     ].
