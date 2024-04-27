@@ -51,3 +51,15 @@
     rr:predicate foaf:mbox;
     rr:objectMap [ rml:reference "MAIL"; rr:datatype xsd:string ] 
     ].
+
+<#AlumnosMapping>
+  rr:predicateObjectMap [
+    rr:predicate :cargo;
+    rr:objectMap [ rml:reference "Cargo"; rr:datatype xsd:string ] 
+    ].
+
+<#AlumnosMapping>
+  rr:predicateObjectMap [
+    rr:predicate :inscripto;
+    rr:objectMap [ rml:reference "Inscripto MCC"; rr:datatype xsd:boolean ] 
+    ].
