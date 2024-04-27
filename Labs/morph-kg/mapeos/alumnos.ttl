@@ -67,5 +67,5 @@
 <#AlumnosMapping>
   rr:predicateObjectMap [
     rr:predicate rdfs:label;
-    rr:objectMap [ rml:reference "[Nombre, Apellido]"; rr:datatype xsd:string ] 
+    rr:objectMap [ rml:reference "Apellido"; rr:datatype xsd:string ] 
     ].
