@@ -20,7 +20,7 @@
 
 <#AlumnosMapping>
   rml:logicalSource [
-    rml:source "https://raw.githubusercontent.com/germanbraun/cursoKG/main/Labs/morph-kg/data/alumnos.csv";
+    rml:source "https://raw.githubusercontent.com/liamosycka/cursoKG/main/Labs/morph-kg/data/alumnos.csv";
     rml:referenceFormulation ql:CSV ].
 
 <#AlumnosMapping>
