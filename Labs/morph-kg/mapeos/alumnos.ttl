@@ -63,3 +63,9 @@
     rr:predicate :inscripto;
     rr:objectMap [ rml:reference "Inscripto MCC"; rr:datatype xsd:boolean ] 
     ].
+
+<#AlumnosMapping>
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [ rml:reference "{Nombre, Apellido}"; rr:datatype xsd:string ] 
+    ].
